@@ -42,7 +42,7 @@ const HealthHome = () => {
                       <td>{item.email}</td>
                       <td>
                         <button className="btn btn-primary" onClick={() => console.log(`View: ${item.id}`)}>View</button>
-                        <button className="btn btn-secondary" onClick={() => console.log(`Update: ${item.id}`)}>Update</button>
+                       <Link to={"/update"}> <button className="btn btn-secondary" onClick={() => console.log(`Update: ${item.id}`)}>Update</button></Link>
                         <button className="btn btn-danger" onClick={() => handleDelete(item.id)}>Delete</button>
                       </td>
                     </tr>

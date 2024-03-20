@@ -6,6 +6,7 @@ import Footer from './Footer'
 import {BrowserRouter,Route,Router, Routes} from "react-router-dom"
 import MohHome from './MohHome'
 import AddRecords from './AddRecords'
+import EditDetail from './EditDetail'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Route path='/' element={<MohHome/>}/>
       <Route path='/HealthHome' element={<HealthHome/>}/>
       <Route path='/AddRecords' element={<AddRecords/>}/>
+      <Route path='/update' element={<EditDetail/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>
