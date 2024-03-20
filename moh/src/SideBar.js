@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   useEffect(() => {
@@ -27,24 +28,24 @@ const SideBar = () => {
       <div className="position-sticky pt-3 sidebar-sticky">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="/home">
+            <a className="nav-link" aria-current="page" href="/">
               <b><i className="bi bi-people-fill"></i> Home</b>
             </a>
           </li>
           
           <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="/">
-              <b><i className="bi bi-people-fill"></i> Newly Married Couple &nbsp;&nbsp;&nbsp; Management</b>
-            </a>
-          </li>
+            <Link className="nav-link" to="./HealthHome">
+              <b><i className="bi bi-people-fill"></i>Student's Health Management</b>
+            </Link>
+            </li>
           <li className="nav-item">
             <a className="nav-link" href="/index2">
-              <b><i className="bi bi-gender-female"></i> Pregnant Mothers Management</b>
+              <b><i className="bi bi-gender-female"></i> Vaccination  Management</b>
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/about">
-              <b><i className="bi bi-file-earmark-person"></i> Baby's Information and Vaccination Management</b>
+              <b><i className="bi bi-file-earmark-person"></i> Management</b>
             </a>
           </li>
         </ul>

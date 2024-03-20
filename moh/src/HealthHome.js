@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import AddRecords from './AddRecords';
 
 
 const HealthHome = () => {
@@ -19,7 +21,7 @@ const HealthHome = () => {
           <div className="row">
             
             <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <button>Add new Records</button>
+            <button> <Link to={"/AddRecords"} >Add new Records</Link></button>
               <h2>Student Health Management</h2>
               <table className="table">
                 <thead>
@@ -54,6 +56,7 @@ const HealthHome = () => {
 }
 
 export default HealthHome
+
 
 
 

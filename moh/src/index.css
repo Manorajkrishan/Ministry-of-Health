@@ -8,7 +8,7 @@
   left: 0;
   bottom: 0;
   z-index: 100;
-  padding: 48px 0;
+  padding: 50px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -18,7 +18,7 @@
 }
 
 .sidebar .nav-link {
-  padding: 30px;
+  padding: 3px;
   color: #333;
   
 }
@@ -71,4 +71,67 @@ main {
 
 .table button {
   margin-right: 5px;
+}
+
+
+/* Styles for the form */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+/* Styles for the form */
+form {
+  width: 50%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for form inputs */
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styles for buttons */
+.btn {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for flex container */
+.d-flex {
+  display: flex;
+}
+
+/* Styles for NavLink button */
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
 }
