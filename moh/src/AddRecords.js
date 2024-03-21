@@ -61,9 +61,10 @@ const AddRecords = () => {
   return (
     
     <div className='container mt-5'>
-            <h4>All New Student Information</h4>
+            
             <div className='underline1'></div>
             <form className='mt-5 shadow p-5 w-75'>
+            <h4>All New Student Information</h4>
                 <div className="mb-3">
                     <label htmlFor="exampleFormControlInput1" className="form-label">Student Name</label>
                     <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter Student Name" 
@@ -84,6 +85,12 @@ const AddRecords = () => {
                     <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Enter Contact Number"
                     onChange={setstud} name="contact" value={inputdata.contact}/>
                 </div>
+                <div className="mb-3">
+    <label htmlFor="exampleFormControlInput1" className="form-label">Health issues</label>
+    <textarea className="form-control" id="exampleFormControlInput1" placeholder="enter health issues" 
+    onChange={setstud} name="contact" value={inputdata.contact}></textarea>
+</div>
+
                 <div className='d-flex'>
                          <button className='btn btn-primary' onClick={addinpdata}>Add Student</button>
                          <ToastContainer />
