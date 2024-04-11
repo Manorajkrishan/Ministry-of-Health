@@ -44,12 +44,12 @@ const CoupleSchema = new Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now,  
+        default: Date.now,  // Set default value to the current date and time
         required: true
     },
     updatedAt: {
         type: Date,
-        default: Date.now,  
+        default: Date.now,  // Set default value to the current date and time
         required: true
     },
 });
