@@ -22,6 +22,7 @@ mongoose.connect(URL, {
   //   useFindAndModify: false
 });
 
+//mongo db connection status 
 const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("MongoDB Connection Success !");
