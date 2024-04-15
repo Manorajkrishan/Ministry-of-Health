@@ -8,7 +8,7 @@ const studSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    subject:{
+    parent:{
         type:String,
         required:true
     },
@@ -17,7 +17,7 @@ const studSchema = new mongoose.Schema({
         required:true
     },
     
-        health_issues:{
+        health:{
             type:String,
             required:true
         }

@@ -22,36 +22,35 @@ const SideBar = () => {
   }, []);
 
   return (
-    <div>
+    <nav id="sidebarMenu" className="position-fixed top-0 start-0 col-md-3 col-lg-2 d-md-block bg-light sidebar">
+    <div className="position-sticky pt-3 sidebar-sticky">
+      <Link className="nav-link" aria-current="page" to="/home">
+        <h1>Doctor</h1>
+      </Link>
+      <ul className="nav flex-column">
+        <li className="nav-item">
+          <Link className="nav-link" aria-current="page" to="/">
+            <b><i className="bi bi-people-fill"></i>Home</b>
+            <hr />
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" aria-current="page" to="/">
+            <b><i className="bi bi-people-fill"></i>Vaccination</b>
+            <hr />
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/HealthHome">
+            <b><i className="bi bi-gender-female"></i> Student Care</b>
+            <hr />
+          </Link>
+        </li>
+
         
-      <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-      <div className="position-sticky pt-3 sidebar-sticky">
-        <ul className="nav flex-column">
-          <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="/">
-              <b><i className="bi bi-people-fill"></i> Home</b>
-            </a>
-          </li>
-          
-          <li className="nav-item">
-            <Link className="nav-link" to="./HealthHome">
-              <b><i className="bi bi-people-fill"></i>Student's Health Management</b>
-            </Link>
-            </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/index2">
-              <b><i className="bi bi-gender-female"></i> Vaccination  Management</b>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/about">
-              <b><i className="bi bi-file-earmark-person"></i> Management</b>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      </ul>
     </div>
+  </nav>
   );
 };
 

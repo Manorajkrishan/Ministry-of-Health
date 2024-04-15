@@ -16,8 +16,9 @@ const App = () => {
   return (
     
     <BrowserRouter>
-    <Header/>
+   
     <SideBar/>
+    <Header/>
     <Routes>
       <Route path='/' element={<MohHome/>}/>
       <Route path='/HealthHome' element={<HealthHome/>}/>
@@ -25,7 +26,7 @@ const App = () => {
       <Route path='/update/:id' element={<EditDetail/>}/>
       <Route path='/view/:id' element={<Viewst/>}/>
     </Routes>
-    <Footer/>
+   
     </BrowserRouter>
   )
 }
