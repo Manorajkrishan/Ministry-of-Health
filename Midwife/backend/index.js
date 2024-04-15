@@ -30,11 +30,11 @@ connection.once("open", () => {
 
 // Import route files
 const coupleRouter = require("./routes/coupledetails.js");
-const motherRouter = require("./routes/motherdetails.js");
+//const motherRouter = require("./routes/motherdetails.js");
 
 // Use route middleware
 app.use("/coupledetails", coupleRouter);
-app.use("/motherdetails", motherRouter);
+//napp.use("/motherdetails", motherRouter);
 
 // server port allocation & server start
 app.listen(PORT, () => {
