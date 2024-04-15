@@ -17,7 +17,7 @@ export default function AddCouples() {
   const navigate = useNavigate();
 
   const validateNIC = (nic) => {
-    const regex = /^(1[9][1-9][0-9]|200[0-7])([0-9]{10})$|^(1[0-9]|[2-9][0-9])([0-9]{8})([Vv])$/;
+    const regex = /^(1[9][1-9][0-9]|200[0-7])([0-9]{12})$|^(1[0-9]|[2-9][0-9])([0-9]{8})([Vv])$/;
     return regex.test(nic);
   };
 
