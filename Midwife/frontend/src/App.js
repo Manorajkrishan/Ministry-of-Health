@@ -23,7 +23,7 @@ import Addcouples from './Component/Addcouples';
 // import AddMothers from './Component/Addmothers'
 // import EditMother from './Component/Updatemother';
 // import ViewMother from './Component/Viewmother';
-import Allmothers from './Component/Allmothers';
+//import Allmothers from './Component/Allmothers';
 const App = () => {
   return (
     <BrowserRouter>
@@ -36,7 +36,8 @@ const App = () => {
           {/* <Route path="/home" element={<Homemidwife />} /> */}
           {/*Couple*/}
           <Route path="/allcouple" element={<Allcouples />} />
-          <Route path="/allmothers" element={<Allmothers />} />
+          <Route path="/" element={<Allcouples />} />
+          {/* <Route path="/allmothers" element={<Allmothers />} /> */}
           <Route path="/addcouple" element={<Addcouples />} />
           {/* <Route path="/editcouple/:id" element={<EditCouple />} />
           <Route path="/viewcouple/:id" element={<ViewCouple />} /> */}
