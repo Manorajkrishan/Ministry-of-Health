@@ -7,7 +7,7 @@ import {
 // import Header from './Component/Header';
 // import Sidebar from './Component/Sidebar';
 import './indexMidwife.css';
-import Homemidwife from './Component/Homemidwife';
+//import Homemidwife from './Component/Homemidwife';
 // import Updatecouple from './Component/Updatecouple'
 // import HomePage from './Component/Welcome';
 // import Homemiwifes from './Component/Homemidwife';
@@ -33,7 +33,7 @@ const App = () => {
           <Route path="/logout" element={<LoginForm />} /> */}
           
           {/*Midwife*/}
-          <Route path="/home" element={<Homemidwife />} />
+          {/* <Route path="/home" element={<Homemidwife />} /> */}
           {/*Couple*/}
           <Route path="/allcouple" element={<Allcouples />} />
           <Route path="/allmothers" element={<Allmothers />} />
