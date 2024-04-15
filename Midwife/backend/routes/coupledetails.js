@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Coupledetails = require('../models/coupledetails');
 const coupledetails = require('../models/coupledetails');
-const mothers = require('../models/motherdetails')
+//const mothers = require('../models/motherdetails')
 
 router.route("/addcouple").post((req,res)=>{
 
