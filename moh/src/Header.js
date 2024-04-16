@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="header">
     <div className="logo">MOH Doctor</div>
-    <input type="text" placeholder="Search..." className="search-bar" />
+    
     <button className="logout-button">Log Out</button>
   </div>
   );

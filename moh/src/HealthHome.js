@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import SideBar from './SideBar';
 
 const HealthHome = () => {
@@ -11,9 +11,9 @@ const HealthHome = () => {
             const response = await fetch("http://localhost:5000/getstud");
             const students = await response.json();
 
-            // Assign sequential IDs to students
-            const formattedStudents = students.map((student, index) => ({
-                id: index + 1, // Assign sequential ID starting from 1
+            // Transform _id to id for consistency
+            const formattedStudents = students.map(student => ({
+                id: student._id, // Use _id as id
                 name: student.name,
                 address: student.address,
                 contact: student.contact
@@ -26,7 +26,7 @@ const HealthHome = () => {
     };
 
     // Function to delete a student record
-    const deletestud = async (id) => {
+    const deleteStudent = async (id) => {
         try {
             const response = await fetch(`http://localhost:5000/deletestud/${id}`, {
                 method: "DELETE",
@@ -34,10 +34,12 @@ const HealthHome = () => {
                     "Content-Type": "application/json"
                 }
             });
-            const deletedData = await response.json();
             if (response.status === 200) {
                 // Update the data after successful deletion
-                getStudentData();
+                getStudentData(); 
+                
+
+                
             } else {
                 console.error("Failed to delete student record");
             }
@@ -50,7 +52,11 @@ const HealthHome = () => {
         // Fetch student data when the component mounts
         getStudentData();
     }, []);
-
+//search Student
+const [searchInput,setSearchInput]=useState('');
+const searchStud=(searchval)=>{
+    setSearchInput(searchval)
+}
     return (
         <div className="container-fluid">
             <div className="row">
@@ -59,6 +65,13 @@ const HealthHome = () => {
                 </nav>
                 <main className="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
                     <h2 className="text-center mt-3">Student Health Management</h2>
+                    <div class="ms-auto w-50">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search Student" 
+                        onChange={(e)=>searchStud(e.target.value)}
+                    />
+                </div>
+                
+                
                     <table className="table mt-5">
                         <thead>
                             <tr className='bg-primary me-3'>
@@ -70,23 +83,23 @@ const HealthHome = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {data.map(result => (
-                                <tr key={result.id}>
-                                    <td>{result.id}</td>
-                                    <td>{result.name}</td>
-                                    <td>{result.address}</td>
-                                    <td>{result.contact}</td>
+                            {data.map((item ,index)=> (
+                                <tr key={index}>
+                                    <td>{index+1}</td>
+                                    <td>{item.name}</td>
+                                    <td>{item.address}</td>
+                                    <td>{item.contact}</td>
                                     <td>
                                         {/* View button (Link to a view page) */}
-                                        <Link to={`/view/${result.id}`}>
-                                            <button className="btn btn-primary" onClick={() => console.log(`View: ${result.id}`)}>View</button>
+                                        <Link to={`/view/${item.id}`}>
+                                            <button className="btn btn-primary" onClick={() => console.log(`View: ${item.id}`)}>View</button>
                                         </Link>
                                         {/* Update button (Link to an update page) */}
-                                        <Link to={`/update/${result.id}`}>
-                                            <button className="btn btn-secondary" onClick={() => console.log(`Update: ${result.id}`)}>Update</button>
+                                        <Link to={`/update/${item.id}`}>
+                                            <button className="btn btn-secondary" onClick={() => console.log(`Update: ${item.id}`)}>Update</button>
                                         </Link>
                                         {/* Delete button */}
-                                        <button className="btn btn-danger" onClick={() => deletestud(result._id)}>Delete</button>
+                                        <button className="btn btn-danger" onClick={() => deleteStudent(item.id)}>Delete</button>
                                     </td>
                                 </tr>
                             ))}

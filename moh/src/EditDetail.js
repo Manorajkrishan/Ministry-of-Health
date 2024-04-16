@@ -14,44 +14,34 @@ const EditDetail = () => {
     });
 
     // Onchange function
-    const setstud=(e)=>{
-        console.log(e.target.value);
-        const {name,value}=e.target;
-        setInputdata((prestud)=>{
-            return{
-                ...prestud,[name]:value
+    const setstud = (e) => {
+        const { name, value } = e.target;
+        setInputdata((prestud) => {
+            return {
+               ...prestud,
+                [name]: value
             }
         })
     }
 
     // Get single student data
     const { id } = useParams("");
-    console.log(id);
-
-    const getstuddata = async () => {
-        
-        const res = await fetch(`http://localhost:5000/getstud/${id}`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-        const data = await res.json();
-
-        if (res.status === 422 || !data) {
-            console.log("error ");
-        } else {
-            setInputdata(data)
-            console.log("get data");
-        }
-    }
-    
-
     useEffect(() => {
+        const getstuddata = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/getstud/${id}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                setInputdata(data);
+            } catch (error) {
+                console.error("Error fetching student data:", error);
+            }
+        }
         getstuddata();
-    }, []);
+    }, [id]);
 
-    // Update student data
     const updatestud = async (e) => {
         e.preventDefault();
 
@@ -63,20 +53,37 @@ const EditDetail = () => {
             },
             body: JSON.stringify({ name, address, parent, contact, health })
         });
-        const data2= await res2.json();
-        setInputdata(data2);
-        toast.success('Please wait  !', {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true, 
-            progress: undefined,
+        if (!res2.ok) {
+            toast.error('Failed to update student!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
             });
-        setTimeout(() => {
-            navigate('/HealthHome');
-          }, 3000);
+        } else {
+            toast.success('Student information updated successfully!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+            setInputdata({
+                "name": "",
+                "address": "",
+                "parent": "",
+                "contact": "",
+                "health": ""
+            });
+            setTimeout(() => {
+                navigate('/HealthHome');
+            }, 3000);
+        }
     }
 
     const navigate = useNavigate();
@@ -93,9 +100,9 @@ const EditDetail = () => {
                                 <label htmlFor="name" className="form-label">Student Name</label>
                                 <input type="text" className="form-control" id="name" placeholder="Enter Student Name"
                                     onChange={setstud} name="name" value={inputdata.name} />
-                            </div>
+                           </div>
                             <div className="mb-3">
-                                <label htmlFor="address" className="form-label">Student Address</label>
+                                <label htmlFor="address" className="form-label">Address</label>
                                 <input type="text" className="form-control" id="address" placeholder="Enter Student Address"
                                     onChange={setstud} name="address" value={inputdata.address} />
                             </div>
@@ -106,25 +113,23 @@ const EditDetail = () => {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="contact" className="form-label">Contact Number</label>
-                                <input type="number" className="form-control" id="contact" placeholder="Enter Contact Number"
+                                <input type="text" className="form-control" id="contact" placeholder="Enter Contact Number"
                                     onChange={setstud} name="contact" value={inputdata.contact} />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="health" className="form-label">Health Issues</label>
-                                <textarea className="form-control" id="health" rows="3" placeholder="Enter Health Issues"
-                                    onChange={setstud} name="health" value={inputdata.health}></textarea>
+                                <label htmlFor="health" className="form-label">Health Status</label>
+                                <input type="text" className="form-control" id="health" placeholder="Enter Health Status"
+                                    onChange={setstud} name="health" value={inputdata.health} />
                             </div>
-                            <div className='d-flex'>
-                                <button className='btn btn-primary' onClick={updatestud}>Update Student</button>
-                                <ToastContainer />
-                                <NavLink className='btn btn-primary ms-auto' to="/AddRecords">Back to Add Records</NavLink>
-                            </div>
+                            <button type="submit" className="btn btn-primary" onClick={updatestud}>Update</button>
+                            <NavLink to="/HealthHome" className="btn btn-danger mx-3">Cancel</NavLink>
                         </form>
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
-    )
+    );
 }
 
 export default EditDetail;
