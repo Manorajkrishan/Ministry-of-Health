@@ -36,6 +36,7 @@ const HealthHome = () => {
             });
             if (response.status === 200) {
                 // Update the data after successful deletion
+
                 getStudentData(); 
                 
 
