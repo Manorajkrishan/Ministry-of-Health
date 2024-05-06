@@ -1,0 +1,21 @@
+.report-container {
+    padding: 20px;
+}
+
+.report-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.chart {
+    width: 45%;
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+}

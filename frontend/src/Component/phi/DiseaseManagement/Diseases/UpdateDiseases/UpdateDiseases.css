@@ -1,0 +1,38 @@
+.updateDcol-md-4 mb-3 {
+    word-spacing: 10px;
+
+}
+
+
+
+.updateD{
+    background-color:#fdfde9;
+    padding: 10px;
+}
+
+.updateD label {
+    display: inline-block;
+    margin: 0.2em;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.updateDinput {
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid black
+}
+
+.updateDinput#submit {
+    margin-top: 7px;
+    padding: 4px;
+}
+
+.updateDinput#submit:hover {
+    background-color: green;
+    color: aliceblue
+}
+
+.updateD.form-row .form-group {
+    padding: 5px 30px 0 0;
+}
