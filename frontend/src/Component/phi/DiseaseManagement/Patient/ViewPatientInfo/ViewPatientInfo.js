@@ -43,6 +43,35 @@ function ListOfPatients() {
         // onAfterPrint: () => alert("data saved")
     });
 
+    const shareDetailsViaWhatsApp = () => {
+        if (patient) {
+            // Construct the message 
+            let message = `Dear ${patient.patientName} & ${patient.patientNic}
+            Infectious patient Details:
+            - Patient name: ${patient.patientName}
+            - NIC: ${patient.patientNic}
+            - Age: ${patient.patientAge}
+            - Gender: ${patient.patientGender}
+            - Address: ${patient.patientAddress}
+            - Phone: ${patient.patientPhone}
+            - Allergies: ${patient.patientAllergies}
+            - EM: ${patient.patientEM}
+            - Patient Disease: ${patient.patientDisease}
+            - Symptoms: ${patient.patientSymptoms}
+            - DOT: ${patient.patientDateOfDiagnosis ? patient.patientDateOfDiagnosis.toString().slice(0, 10) : ''}
+            - Referred By: ${patient.patientReferredBy}`;
+    
+            // Construct the WhatsApp URL
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${encodeURIComponent(patient.patientPhone)}&text=${encodeURIComponent(message)}`;
+    
+            // Open WhatsApp in a new window
+            window.open(whatsappUrl, '_blank');
+        } else {
+            alert('Infectious patient details are not available.');
+        }
+    };
+    
+
     return (
         <>
             {/* <h4 style={{ textAlign: 'left-align', textDecoration: 'bold' }}>Patient's list</h4>
@@ -61,6 +90,7 @@ function ListOfPatients() {
                         <br></br>
                         <div ref={generatePDF} style={{ width: '100%' }}>
                             <button className="btn btn-secondary" style={{ marginLeft: '1000px', marginTop: '-105px' }} class="btn btn-primary w-20" onClick={() => { handlePrint() }}>print</button>
+                            <button type="button" style={{ marginLeft: '760px',marginTop:'-152px' }} onClick={shareDetailsViaWhatsApp} className="btn btn-success">Share via WhatsApp</button>                
 
                             <div style={{ float: "right", marginRight: '50px', marginBottom: '50px', marginTop: '-60px' }}>
 
@@ -91,6 +121,7 @@ function ListOfPatients() {
                                                 <label for="patientNic">   patient's nic</label>
                                                 <input type="text" class="form-control" id="patientNic" value={patient.patientNic} readOnly />
                                             </div>
+
                                             <div className="form-group col-md-4">
                                                 <label for="patientAge"> patient's age</label>
                                                 <input type="text" id="patientAge" class="form-control" value={patient.patientAge} readOnly />
@@ -154,6 +185,7 @@ function ListOfPatients() {
 
                         </div >
                         <Link to="/patients/list" class="btn btn-primary w-20" style={{ marginLeft: '1000px' }}>Back</Link>
+                       
 
                     </div >
                 </div >
