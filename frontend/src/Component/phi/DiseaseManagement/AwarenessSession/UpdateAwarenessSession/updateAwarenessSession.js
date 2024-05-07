@@ -65,76 +65,76 @@ function UpdateAwarenessSession() {
     const handleAudienceChange = (event) => {
         const selectedAudience = event.target.value;
         setTargetAudience(selectedAudience);
-      };
-    
+    };
+
 
     return (
         <>
-         <HeaderPHI />
-        <DMsideNav />
-        <div style={{ marginLeft: "300px" }}>
-            <div>
-                <div className="container">
-                    <br></br>
-                    <br></br>
-                    <div className="updateSession">
-                        <h5 style={{ textAlign: 'center' }}>update awareness session</h5>
+            <HeaderPHI />
+            <DMsideNav />
+            <div style={{ marginLeft: "300px" }}>
+                <div>
+                    <div className="container">
                         <br></br>
-                        <form onSubmit={update}>
+                        <br></br>
+                        <div className="updateSession">
+                            <h5 style={{ textAlign: 'left' }}>Edit awareness session</h5>
+                            <br></br>
+                            <form onSubmit={update}>
 
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="title"> Enter the title</label>
-                                    <input type="text" class="form-control" id="title" placeholder="title" onChange={(e) => {
-                                        setTitle(e.target.value)
-                                    }}
-                                        value={title} />
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="title"> Enter the title</label>
+                                        <input type="text" class="form-control" id="title" placeholder="title" onChange={(e) => {
+                                            setTitle(e.target.value)
+                                        }}
+                                            value={title} />
 
-                                </div>
-
-
-                                <div class="form-group col-md-6">
-                                    <label for="description"> Enter the description</label>
-                                    <input type="text" class="form-control" id="title" placeholder="description" onChange={(e) => {
-                                        setDescription(e.target.value)
-                                    }}
-                                        value={description} />
+                                    </div>
 
 
-                                </div>
-
-                                <div class="form-group col-md-6">
-                                    <label for="date"> Enter the date</label>
-                                    <input type="text" class="form-control" id="date" placeholder="date" onChange={(e) => {
-                                        setDate(e.target.value)
-                                    }} value={date} />
-
-
-                                </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="description"> Enter the description</label>
+                                        <input type="text" class="form-control" id="title" placeholder="description" onChange={(e) => {
+                                            setDescription(e.target.value)
+                                        }}
+                                            value={description} />
 
 
-                                <div class="form-group col-md-6">
-                                    <label for="time"> Enter the time</label>
-                                    <input type="time" class="form-control" id="title" placeholder={time} onChange={(e) => {
-                                        setTime(e.target.value)
-                                    }} value={time} />
+                                    </div>
 
-                                </div>
-
-
-                                <div class="form-group col-md-6">
-                                    <label for="location"> Enter the location</label>
-                                    <input type="text" class="form-control" id="location" placeholder="location" onChange={(e) => {
-                                        setLocation(e.target.value)
-                                    }} value={location} />
+                                    <div class="form-group col-md-4">
+                                        <label for="date"> Enter the date</label>
+                                        <input type="text" class="form-control" id="date" placeholder="date" onChange={(e) => {
+                                            setDate(e.target.value)
+                                        }} value={date} />
 
 
-                                </div>
+                                    </div>
 
-                                <div class="form-group col-md-6">
+
+                                    <div class="form-group col-md-4">
+                                        <label for="time"> Enter the time</label>
+                                        <input type="time" class="form-control" id="title" placeholder={time} onChange={(e) => {
+                                            setTime(e.target.value)
+                                        }} value={time} />
+
+                                    </div>
+
+
+                                    <div class="form-group col-md-4">
+                                        <label for="location"> Enter the location</label>
+                                        <input type="text" class="form-control" id="location" placeholder="location" onChange={(e) => {
+                                            setLocation(e.target.value)
+                                        }} value={location} />
+
+
+                                    </div>
+
+                                    <div class="form-group col-md-4">
                                         <label for="targetAudience">select  the target audience</label>
 
-                                        <select type="text" class="form-control" id="targetAudience"    value={targetAudience} placeholder={targetAudience} onChange={handleAudienceChange}>
+                                        <select type="text" class="form-control" id="targetAudience" value={targetAudience} placeholder={targetAudience} onChange={handleAudienceChange}>
 
 
                                             <option value="">{targetAudience}</option>
@@ -155,25 +155,25 @@ function UpdateAwarenessSession() {
 
                                         </select>
 
-                                
-
-                                      
-                                </div>
 
 
 
-                                <div class="form-group col-md-6">
-                                    <label for="presenter"> Enter the presenter</label>
-                                    <input type="text" class="form-control" id="presenter" placeholder="presenter" onChange={(e) => {
-                                        setPresenter(e.target.value)
-                                    }}
-                                        value={presenter} />
-
-                                </div>
+                                    </div>
 
 
 
-                                {/* <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
+                                        <label for="presenter"> Enter the presenter</label>
+                                        <input type="text" class="form-control" id="presenter" placeholder="presenter" onChange={(e) => {
+                                            setPresenter(e.target.value)
+                                        }}
+                                            value={presenter} />
+
+                                    </div>
+
+
+
+                                    {/* <div class="form-group col-md-4">
                                     <label for="sampleImg"> upload the sampleImg</label>
                                     <input type="text" class="form-control" id="sampleImg" placeholder="sampleImg" onChange={(e) => {
 
@@ -182,16 +182,16 @@ function UpdateAwarenessSession() {
                                         value={sampleImg} />
 
                                 </div> */}
-                            </div>
+                                </div>
 
-                            <button class="btn btn-primary w-100" type="submit">Submit</button>
+                                <button style={{ backgroundColor: "orange", width: '800px', marginLeft: '90px' }} type="submit">Submit</button>
 
-                        </form>
+                            </form>
 
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
             </div>
         </>
 

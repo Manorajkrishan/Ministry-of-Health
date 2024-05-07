@@ -4,11 +4,8 @@
 }
 
 .addSession {
-    background-color:#FFFFFF;
+    background-color: rgba(224, 221, 217, 0.803);
     padding: 10px;
-    border-radius: 16px;
-    border:2px solid rgb(185, 181, 181);
-    z-index: 1;
 }
 
 .addSession label {

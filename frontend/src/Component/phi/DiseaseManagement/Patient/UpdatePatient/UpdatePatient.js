@@ -144,139 +144,139 @@ function UpdatePatient() {
 
     return (
         <>
-        <HeaderPHI />
-        <DMsideNav />
-        <div style={{ marginLeft: "300px" }}>
-        <div>
-            <div className="container">
-                <br></br><br></br>
-                <div className="updateP">
-                    <h5 style={{ textAlign: 'center' }}>update patient details</h5>
-                    <br></br>
-                    <form onSubmit={update}>
-                        <div className="form-row">
-                            <div className="form-group col-md-6">
-                                <label for="patientName">Enter the patient name</label>
-                                <input type="text" class="form-control" id="patientName" placeHolder="edit the name" onChange={(e) => {
-                                    setPatientName(e.target.value);
-
-                                }}
-                                    value={patientName} />
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="patientNic">  Enter the patient's nic</label>
-                                <input type="text" class="form-control" id="patientNic" placeholder="NIC" onChange={(e) => {
-                                    setPatientNic(e.target.value)
-                                }}
-                                    value={patientNic} />
-                            </div>
-                            <div className="form-group col-md-6">
-                                <label for="patientAge">Enter the patient's age</label>
-                                <input type="text" id="patientAge" placeholder="patientAge" class="form-control" onChange={(e) => {
-                                    setPatientAge(e.target.value);
-                                }} value={patientAge} />
-                            </div>
-
-
-
-                            < div class="form-group col-md-6">
-                                <label for="patientGender">select the gender of the patient</label>
-
-                                <select className="form-control" id="patientGender" value={patientGender} onChange={handleGenderChange}>
-                                    <option value="">select the gender</option>
-                                    <option value="male">male</option>
-                                    <option value="female">female</option>
-                                </select>
-
-
-                            </div>
-
-
-                            <div className="form-group col-md-6">
-                                <label for="patientAddress">Enter the patientAddress</label>
-                                <input type="text" id="patientAddress" placeholder="patientAddress" class="form-control" onChange={(e) => {
-                                    setPatientAddress(e.target.value);
-                                }} value={patientAddress} />
-                            </div>
-
-                            <div className="form-group col-md-6">
-                                <label for="patientPhone">Enter the patientPhone</label>
-                                <input required type="tel" class="form-control" id="patientPhone" value={patientPhone} placeholder="patientPhone" minLength={10} maxLength={10} title="Please enter a 10-digit phone number" onChange={(e) => {
-                                    setPatientPhone(e.target.value);
-                                }}  />
-                            </div>
-
-
-                            <div className="form-group col-md-6">
-                                <label for="patientAllergies">Enter the patientAllergies</label>
-                                <input type="text" id="patientAllergies" placeholder="patientAllergies" class="form-control" onChange={(e) => {
-                                    setPatientAllergies(e.target.value);
-                                }} value={patientAllergies} />
-                            </div>
-
-                            <div className="form-group col-md-6">
-                                <label for="patientEM">Enter the patientEM</label>
-                                <input type="text" id="patientEM" placeholder="patientEM" class="form-control" onChange={(e) => {
-                                    setPatientEM(e.target.value);
-                                }} value={patientEM} />
-                            </div>
-
-                            <div className="form-group col-md-6">
-                                <label for="patientDisease">Enter the patientDisease</label>
-                                <input type="text" id="patientDisease" placeholder="patientDisease" class="form-control" onChange={(e) => {
-                                    setPatientDisease(e.target.value);
-                                }} value={patientDisease} />
-                            </div>
-
-                            <div className="form-group col-md-6">
-                                <label for="patientSymptoms">Enter the patient Symptoms</label>
-                                <input type="text" id="patientSymptoms" placeholder="patientSymptoms" class="form-control" onChange={(e) => {
-                                    setPatientSymptoms(e.target.value);
-                                }} value={patientSymptoms} />
-                            </div>
-
-                            < div class="form-group col-md-6">
-                                <label for="patientDateOfDiagnosis">  Enter the PatientDateOfDiagnosis</label>
-
-                                <input type="date" class="form-control" id="patientDateOfDiagnosis" value={patientDateOfDiagnosis?.toString().slice(0, 10)} onChange={(e) => {
-                                    console.log(e);
-                                    setPatientDateOfDiagnosis(e.target.value)
-                                }} />
-                            </div>
-
-                            < div class="form-group col-md-6">
-                                <label for="patientImg">  Enter the Patient image</label>
-
-                                <input type="file" class="form-control" id="patientImg" placeholder="patientImg" onChange={(e) => {
-                                    console.log(e);
-                                    setPatientImg(e.target.value)
-                                }} />
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="patientReferredBy">  Enter the patientReferredBy</label>
-                                <input type="text" class="form-control" id="patientReferredBy" placeholder="patientReferredBy" onChange={(e) => {
-
-                                    setPatientReferredBy(e.target.value)
-                                }}
-                                    value={patientReferredBy} />
-                            </div>
+            <HeaderPHI />
+            <DMsideNav />
+            <div style={{ marginLeft: "300px" }}>
+                <div>
+                    <div className="container">
+                        <br></br><br></br>
+                        <div className="updateP">
+                            <h5 style={{ textAlign: 'left' }}>Edit patient details</h5>
                             <br></br>
+                            <form onSubmit={update}>
+                                <div className="form-row">
+                                    <div className="form-group col-md-4">
+                                        <label for="patientName">Enter the patient name</label>
+                                        <input type="text" class="form-control" id="patientName" placeHolder="edit the name" onChange={(e) => {
+                                            setPatientName(e.target.value);
+
+                                        }}
+                                            value={patientName} />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="patientNic">  Enter the patient's nic</label>
+                                        <input type="text" class="form-control" id="patientNic" placeholder="NIC" onChange={(e) => {
+                                            setPatientNic(e.target.value)
+                                        }}
+                                            value={patientNic} />
+                                    </div>
+                                    <div className="form-group col-md-4">
+                                        <label for="patientAge">Enter the patient's age</label>
+                                        <input type="text" id="patientAge" placeholder="patientAge" class="form-control" onChange={(e) => {
+                                            setPatientAge(e.target.value);
+                                        }} value={patientAge} />
+                                    </div>
 
 
-                        </div>
+
+                                    < div class="form-group col-md-4">
+                                        <label for="patientGender">select the gender of the patient</label>
+
+                                        <select className="form-control" id="patientGender" value={patientGender} onChange={handleGenderChange}>
+                                            <option value="">select the gender</option>
+                                            <option value="male">male</option>
+                                            <option value="female">female</option>
+                                        </select>
 
 
-                        <button type="submit" class="btn btn-primary w-20">UPDATE</button>
+                                    </div>
+
+
+                                    <div className="form-group col-md-4">
+                                        <label for="patientAddress">Enter the patientAddress</label>
+                                        <input type="text" id="patientAddress" placeholder="patientAddress" class="form-control" onChange={(e) => {
+                                            setPatientAddress(e.target.value);
+                                        }} value={patientAddress} />
+                                    </div>
+
+                                    <div className="form-group col-md-4">
+                                        <label for="patientPhone">Enter the patientPhone</label>
+                                        <input required type="tel" class="form-control" id="patientPhone" value={patientPhone} placeholder="patientPhone" minLength={10} maxLength={10} title="Please enter a 10-digit phone number" onChange={(e) => {
+                                            setPatientPhone(e.target.value);
+                                        }} />
+                                    </div>
+
+
+                                    <div className="form-group col-md-4">
+                                        <label for="patientAllergies">Enter the patientAllergies</label>
+                                        <input type="text" id="patientAllergies" placeholder="patientAllergies" class="form-control" onChange={(e) => {
+                                            setPatientAllergies(e.target.value);
+                                        }} value={patientAllergies} />
+                                    </div>
+
+                                    <div className="form-group col-md-4">
+                                        <label for="patientEM">Enter the patientEM</label>
+                                        <input type="text" id="patientEM" placeholder="patientEM" class="form-control" onChange={(e) => {
+                                            setPatientEM(e.target.value);
+                                        }} value={patientEM} />
+                                    </div>
+
+                                    <div className="form-group col-md-4">
+                                        <label for="patientDisease">Enter the patientDisease</label>
+                                        <input type="text" id="patientDisease" placeholder="patientDisease" class="form-control" onChange={(e) => {
+                                            setPatientDisease(e.target.value);
+                                        }} value={patientDisease} />
+                                    </div>
+
+                                    <div className="form-group col-md-4">
+                                        <label for="patientSymptoms">Enter the patient Symptoms</label>
+                                        <input type="text" id="patientSymptoms" placeholder="patientSymptoms" class="form-control" onChange={(e) => {
+                                            setPatientSymptoms(e.target.value);
+                                        }} value={patientSymptoms} />
+                                    </div>
+
+                                    < div class="form-group col-md-4">
+                                        <label for="patientDateOfDiagnosis">  Enter the PatientDateOfDiagnosis</label>
+
+                                        <input type="date" class="form-control" id="patientDateOfDiagnosis" value={patientDateOfDiagnosis?.toString().slice(0, 10)} onChange={(e) => {
+                                            console.log(e);
+                                            setPatientDateOfDiagnosis(e.target.value)
+                                        }} />
+                                    </div>
+
+                                    < div class="form-group col-md-4">
+                                        <label for="patientImg">  Enter the Patient image</label>
+
+                                        <input type="file" class="form-control" id="patientImg" placeholder="patientImg" onChange={(e) => {
+                                            console.log(e);
+                                            setPatientImg(e.target.value)
+                                        }} />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="patientReferredBy">  Enter the patientReferredBy</label>
+                                        <input type="text" class="form-control" id="patientReferredBy" placeholder="patientReferredBy" onChange={(e) => {
+
+                                            setPatientReferredBy(e.target.value)
+                                        }}
+                                            value={patientReferredBy} />
+                                    </div>
+                                    <br></br>
+
+
+                                </div>
+
+
+                                <button type="submit" style={{ backgroundColor: "orange", width: '800px', marginLeft: '90px' }}>Submit</button>
 
 
 
 
 
 
-                    </form> </div>
+                            </form> </div>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </>
 
 

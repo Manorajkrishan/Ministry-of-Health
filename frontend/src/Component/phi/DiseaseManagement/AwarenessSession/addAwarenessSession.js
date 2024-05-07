@@ -50,12 +50,14 @@ function AddAwarenessSession() {
                         <br></br>
                         <br></br>
                         <div className="addSession">
-                            <h5 style={{ textAlign: 'center' }}>Add awareness session</h5>
+                            <h5 style={{ textAlign: 'left' }}>Add awareness session</h5>
+                            <h4 style={{ fontSize: '15px', color: "red" }}>This form is to add the details of the awareness sessions  which is held for the patients with non-communicable diseases.</h4>                            <br></br>
+
                             <br></br>
                             <form onSubmit={sendData}>
 
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="title"> Enter the title</label>
                                         <input type="text" class="form-control" id="title" placeholder="title" onChange={(e) => {
                                             setTitle(e.target.value)
@@ -64,7 +66,7 @@ function AddAwarenessSession() {
                                     </div>
 
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="description"> Enter the description</label>
                                         <input type="text" class="form-control" id="title" placeholder="description" onChange={(e) => {
                                             setDescription(e.target.value)
@@ -73,7 +75,7 @@ function AddAwarenessSession() {
 
                                     </div>
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="date"> Enter the date</label>
                                         <input type="date" class="form-control" id="date" placeholder="date" onChange={(e) => {
                                             setDate(e.target.value)
@@ -83,7 +85,7 @@ function AddAwarenessSession() {
                                     </div>
 
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="time"> Enter the time</label>
                                         <input type="time" class="form-control" id="title" placeholder="time" onChange={(e) => {
                                             setTime(e.target.value)
@@ -92,7 +94,7 @@ function AddAwarenessSession() {
                                     </div>
 
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="location"> Enter the location</label>
                                         <input type="text" class="form-control" id="location" placeholder="location" onChange={(e) => {
                                             setLocation(e.target.value)
@@ -101,7 +103,7 @@ function AddAwarenessSession() {
 
                                     </div>
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="targetAudience">select  the target audience</label>
 
                                         <select type="text" class="form-control" id="targetAudience" placeholder="targetAudience" onChange={handleAudienceChange}>
@@ -129,7 +131,7 @@ function AddAwarenessSession() {
 
 
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="presenter"> Enter the presenter</label>
                                         <input type="text" class="form-control" id="presenter" placeholder="presenter" onChange={(e) => {
                                             setPresenter(e.target.value)
@@ -139,7 +141,7 @@ function AddAwarenessSession() {
 
 
                                     {/* 
-                           <div class="form-group col-md-6">
+                           <div class="form-group col-md-4">
                                     <label for="sampleImg"> upload the sampleImg</label>
                                     <input type="url" class="form-control" id="sampleImg" placeholder="sampleImg" onChange={(e) => {
 
@@ -148,7 +150,7 @@ function AddAwarenessSession() {
 
                                 </div>  */}
                                 </div>
-                                <button class="btn btn-primary w-20 " type="submit">Submit</button>
+                                <button style={{ backgroundColor: "orange", width: '800px', marginLeft: '90px' }} type="submit">Submit</button>
                             </form>
 
                         </div>

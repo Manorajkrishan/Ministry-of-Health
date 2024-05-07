@@ -4,8 +4,12 @@
 }
 
 .updateSession {
-    background-color:#fdfde9;
+    background-color:#FFFFFF;
     padding: 10px;
+    border-radius: 16px;
+    border:2px solid rgb(185, 181, 181);
+    z-index: 1;
+
 }
 
 .updateSession label {

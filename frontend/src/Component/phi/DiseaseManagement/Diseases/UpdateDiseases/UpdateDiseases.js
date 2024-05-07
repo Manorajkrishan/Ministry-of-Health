@@ -107,130 +107,130 @@ function UpdateDiseases() {
     }, [id]);
     return (
         <>
-                <HeaderPHI />
-        <DMsideNav />
-        <div style={{ marginLeft: "300px" }}>
-        <div>
-            <div className="container">
-                <br></br>  <br></br>
-                <div className="updateD">
+            <HeaderPHI />
+            <DMsideNav />
+            <div style={{ marginLeft: "300px" }}>
+                <div>
+                    <div className="container">
+                        <br></br>  <br></br>
+                        <div className="updateD">
 
-                    <h5 style={{ textAlign: 'center' }}>Update Disease</h5>
-                    <br></br>
-                    <form onSubmit={update}>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="diseaseName"> Enter the disease Name</label>
-                                <input type="text" class="form-control" id="diseaseName" placeholder="diseaseName" onChange={(e) => {
-                                    setDiseaseName(e.target.value)
-
-                                }}
-                                    value={diseaseName} />
-
-                                {/* <div class="valid-feedback">
-                            Looks good!
-                        </div> */}
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="symptoms">  Enter the symptoms</label>
-                                <input type="text" class="form-control" id="symptoms" placeholder="Last name" onChange={(e) => {
-                                    setSymptoms(e.target.value)
-                                }}
-                                    value={symptoms} />
-                                {/* <div class="valid-feedback">
-                            Looks good!
-                        </div> */}
-                            </div>
-
-                            < div class="form-group col-md-6">
-                                <label for=" causes">  Enter the causes</label>
-                                <input type="text" class="form-control" id=" causes" onChange={(e) => {
-                                    setCauses(e.target.value)
-                                }}
-                                    value={causes} />
-                                {/* <div class="valid-feedback">
-                            Looks good!
-                        </div> */}
-                            </div>
-                            < div class="form-group col-md-6">
-                                <label for="preventionMeasures">  Enter the prevention measures</label>
-                                <input type="text" class="form-control" id="preventionMeasures" onChange={(e) => {
-                                    setPreventionMeasures(e.target.value)
-                                }}
-                                    value={preventionMeasures} />
-                            </div>
-                            < div class="form-group col-md-6">
-                                <label for="treatmentOption">treatmentOptions</label>
-                                <input type="text" class="form-control" id="treatmentOption" placeholder="treatmentOptions" onChange={(e) => {
-                                    setTreatmentOptions(e.target.value)
-                                }} value={treatmentOption} />
-                                {/* <div class="valid-feedback">
-                            Looks good!
-                        </div> */}
-                            </div>
-                            < div class="form-group col-md-6">
-                                <label for="diagnosticTest"> Enter the diagnostic Tests</label>
-                                <input type="text" class="form-control" id=" diagnosticTest" placeholder="diagnosticTest" onChange={(e) => {
-                                    setDiagnosticTests(e.target.value)
-                                }}
-                                    value={diagnosticTest} />
-                                {/* <div class="valid-feedback">
-                            Looks good!
-                        </div> */}
-                            </div>
-                            < div class="form-group col-md-6">
-                                <label for=" riskFactors">  Enter the riskFactors</label>
-                                <input type="text" class="form-control" id=" riskFactors" placeholder="riskFactors" required onChange={(e) => {
-                                    setRiskFactors(e.target.value)
-                                }} value={riskFactors} />
-                                {/* <div class="valid-feedback">
-                            Looks good!
-                        </div> */}
-                            </div>
-                            < div class="form-group col-md-6">
-                                <label for=" managementGuidlines">  Enter themanagement Guidlines</label>
-                                <input type="text" class="form-control" id="managementGuidlines" placeholder="managementGuidlines" onChange={(e) => {
-                                    setManagementGuidlines(e.target.value)
-                                }} value={managementGuidlines} />
-                                {/* <div class="valid-feedback">
-                            Looks good!
-                        </div> */}
-                            </div>
+                            <h5 style={{ textAlign: 'left' }}>Edit Disease</h5>
                             <br></br>
+                            <form onSubmit={update}>
 
-                            < div class="form-group col-md-6">
-                                <label for="publicHealthRecommendations">   Enter the public Health Recommendations</label>
-                                <select class="custom-select custom-select mb-3" onChange={(e) => {
-                                    setPublicHealthRecommendations(e.target.value)
-                                }} value={publicHealthRecommendations}>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="diseaseName"> Enter the disease Name</label>
+                                        <input type="text" class="form-control" id="diseaseName" placeholder="diseaseName" onChange={(e) => {
+                                            setDiseaseName(e.target.value)
 
-                                    <option selected>{publicHealthRecommendations}</option>
-                                    <option value="1">vaccination</option>
-                                    <option value="2">hand hygiene</option>
-                                    <option value="3">Regular health checkup</option>
-                                    <option value="4">Avoid tobacco</option>
+                                        }}
+                                            value={diseaseName} />
 
-
-                                </select>
-
-                                {/* <div class="valid-feedback">
+                                        {/* <div class="valid-feedback">
                             Looks good!
                         </div> */}
-                            </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="symptoms">  Enter the symptoms</label>
+                                        <input type="text" class="form-control" id="symptoms" placeholder="Last name" onChange={(e) => {
+                                            setSymptoms(e.target.value)
+                                        }}
+                                            value={symptoms} />
+                                        {/* <div class="valid-feedback">
+                            Looks good!
+                        </div> */}
+                                    </div>
+
+                                    < div class="form-group col-md-4">
+                                        <label for=" causes">  Enter the causes</label>
+                                        <input type="text" class="form-control" id=" causes" onChange={(e) => {
+                                            setCauses(e.target.value)
+                                        }}
+                                            value={causes} />
+                                        {/* <div class="valid-feedback">
+                            Looks good!
+                        </div> */}
+                                    </div>
+                                    < div class="form-group col-md-4">
+                                        <label for="preventionMeasures">  Enter the prevention measures</label>
+                                        <input type="text" class="form-control" id="preventionMeasures" onChange={(e) => {
+                                            setPreventionMeasures(e.target.value)
+                                        }}
+                                            value={preventionMeasures} />
+                                    </div>
+                                    < div class="form-group col-md-4">
+                                        <label for="treatmentOption">treatmentOptions</label>
+                                        <input type="text" class="form-control" id="treatmentOption" placeholder="treatmentOptions" onChange={(e) => {
+                                            setTreatmentOptions(e.target.value)
+                                        }} value={treatmentOption} />
+                                        {/* <div class="valid-feedback">
+                            Looks good!
+                        </div> */}
+                                    </div>
+                                    < div class="form-group col-md-4">
+                                        <label for="diagnosticTest"> Enter the diagnostic Tests</label>
+                                        <input type="text" class="form-control" id=" diagnosticTest" placeholder="diagnosticTest" onChange={(e) => {
+                                            setDiagnosticTests(e.target.value)
+                                        }}
+                                            value={diagnosticTest} />
+                                        {/* <div class="valid-feedback">
+                            Looks good!
+                        </div> */}
+                                    </div>
+                                    < div class="form-group col-md-4">
+                                        <label for=" riskFactors">  Enter the riskFactors</label>
+                                        <input type="text" class="form-control" id=" riskFactors" placeholder="riskFactors" required onChange={(e) => {
+                                            setRiskFactors(e.target.value)
+                                        }} value={riskFactors} />
+                                        {/* <div class="valid-feedback">
+                            Looks good!
+                        </div> */}
+                                    </div>
+                                    < div class="form-group col-md-4">
+                                        <label for=" managementGuidlines">  Enter themanagement Guidlines</label>
+                                        <input type="text" class="form-control" id="managementGuidlines" placeholder="managementGuidlines" onChange={(e) => {
+                                            setManagementGuidlines(e.target.value)
+                                        }} value={managementGuidlines} />
+                                        {/* <div class="valid-feedback">
+                            Looks good!
+                        </div> */}
+                                    </div>
+                                    <br></br>
+
+                                    < div class="form-group col-md-4">
+                                        <label for="publicHealthRecommendations">   Enter the public Health Recommendations</label>
+                                        <select class="custom-select custom-select mb-3" onChange={(e) => {
+                                            setPublicHealthRecommendations(e.target.value)
+                                        }} value={publicHealthRecommendations}>
+
+                                            <option selected>{publicHealthRecommendations}</option>
+                                            <option value="1">vaccination</option>
+                                            <option value="2">hand hygiene</option>
+                                            <option value="3">Regular health checkup</option>
+                                            <option value="4">Avoid tobacco</option>
+
+
+                                        </select>
+
+                                        {/* <div class="valid-feedback">
+                            Looks good!
+                        </div> */}
+                                    </div>
+                                </div>
+                                <button style={{ backgroundColor: "orange", width: '800px', marginLeft: '90px' }} type="submit">Submit</button>
+
+                            </form >
                         </div>
-                        <button class="btn btn-primary w-100" type="submit">Submit</button>
 
-                    </form >
+                    </div>
                 </div>
-               
-                </div>
+
+
+
+
             </div>
-
-
-
-
-        </div>
 
         </>
     )

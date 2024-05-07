@@ -35,17 +35,19 @@ const VaccineRouter = require("./routes/vaccinedetails");
 const patientRouter = require(`./routes/patients`);
 const diseaseRouter = require(`./routes/diseases`);
 const sessionRouter = require(`./routes/sessions`);
-const phistudentrouter=require(`./routes/router`);
-const factoryRouter=require(`./routes/factorydetails`);
+const messageRouter = require(`./routes/messages`);
+const phistudentrouter = require(`./routes/router`);
+const factoryRouter = require(`./routes/factorydetails`);
 
 // Use route middleware
 app.use("/coupledetails", coupleRouter);
 app.use("/motherdetails", motherRouter);
-app.use("/babydetails",babyRouter);
+app.use("/babydetails", babyRouter);
 app.use("/vaccinedetails", VaccineRouter);
 app.use(`/disease`, diseaseRouter)
 app.use('/patient', patientRouter)
 app.use(`/session`, sessionRouter);
+app.use(`/message`, messageRouter)
 app.use('/', phistudentrouter);
 app.use('/factory', factoryRouter);
 // Apply CORS middleware
