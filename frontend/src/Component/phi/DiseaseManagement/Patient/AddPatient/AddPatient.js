@@ -177,20 +177,17 @@ function AddPatient() {
             <div style={{ marginLeft: "300px" }}>
 
                 <div >
-                    <div className="container">
-
-
-
+                    <div className="container" style={{ marginTop: '12px' }}>
                         <div className="add">
 
-                            <h2 style={{ textAlign: 'center' }}>Add patients form</h2>
+                            <h2 style={{ textAlign: 'left' }}>Patient Registration</h2>
                             <h4 style={{ fontSize: '15px', color: "red" }}>This form is to add the details of the local patients who are affected with infectious diseases.</h4>
                             <hr></hr>
                             <br></br>
                             <form onSubmit={sendData}>
 
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="patientName"> Enter the patient Name</label>
                                         <input type="text" class="form-control" id="patientName" placeholder="eg:John" onChange={(e) => {
                                             setPatientName(e.target.value)
@@ -201,7 +198,7 @@ function AddPatient() {
                                     </div>
 
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="patientNic">  Enter the patient's nic</label>
                                         <input
                                             type="text"
@@ -221,7 +218,7 @@ function AddPatient() {
                         </div> */}
                                     </div>
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="patientAge">  Enter the patient's age</label>
                                         <input type="text" class="form-control" id="patientAge" placeholder="eg:17" onChange={(e) => {
                                             setPatientAge(e.target.value)
@@ -231,7 +228,7 @@ function AddPatient() {
                         </div> */}
                                     </div>
 
-                                    < div class="form-group col-md-6">
+                                    < div class="form-group col-md-4">
                                         <label for="patientGender">select the gender of the patient</label>
 
                                         <select className="form-control" id="patientGender" value={patientGender} onChange={handleGenderChange}>
@@ -244,7 +241,7 @@ function AddPatient() {
                                     </div>
 
 
-                                    < div class="form-group col-md-6">
+                                    < div class="form-group col-md-4">
                                         <label for="patientAddress">  Enter the patientAddress</label>
                                         <input type="text" class="form-control" id=" patientAddress" placeholder="patientAddress" onChange={(e) => {
                                             setPatientAddress(e.target.value)
@@ -255,7 +252,7 @@ function AddPatient() {
                         </div> */}
                                     </div>
 
-                                    < div class="form-group col-md-6">
+                                    < div class="form-group col-md-4">
                                         <label for="patientPhone">Patient Phone</label>
                                         <input required type="tel" class="form-control" id="patientPhone" value={patientPhone} placeholder="patientPhone" minLength={10} maxLength={10} title="Please enter a 10-digit phone number" onChange={(e) => {
                                             setPatientPhone(e.target.value)
@@ -264,7 +261,7 @@ function AddPatient() {
                             Looks good!
                         </div> */}
                                     </div>
-                                    < div class="form-group col-md-6">
+                                    < div class="form-group col-md-4">
                                         <label for="patientAllergies"> Enter the patientAllergies</label>
                                         <input type="text" class="form-control" id="patientAllergies" placeholder="diagnostic allergies" onChange={(e) => {
                                             setPatientAllergies(e.target.value)
@@ -273,14 +270,14 @@ function AddPatient() {
                             Looks good!
                         </div> */}
                                     </div>
-                                    < div class="form-group col-md-6">
+                                    < div class="form-group col-md-4">
                                         <label for="patientEM">  Enter the patient Existing Medication</label>
                                         <input type="text" class="form-control" id="patientEM" placeholder="Existing Medication" required onChange={(e) => {
                                             setPatientEM(e.target.value)
                                         }} />
 
                                     </div>
-                                    {/* < div class="form-group col-md-6">
+                                    {/* < div class="form-group col-md-4">
                                 <label for="patientDiesease">  Enter the patientDiesease</label>
                                 <input type="text" class="form-control" id="patientDiesease" placeholder="patientDiesease" onChange={(e) => {
                                     setPatientDisease(e.target.value)
@@ -290,7 +287,7 @@ function AddPatient() {
 
                                     {/* 
                             data from the disease management gets to the dropdown of thepatient */}
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-md-4">
                                         <label htmlFor="patientDisease">Select Disease</label>
                                         <select className="form-control" id="patientDisease" value={patientDisease} onChange={(e) => setPatientDisease(e.target.value)}>
                                             <option value="">Select Disease</option>
@@ -301,14 +298,14 @@ function AddPatient() {
                                             ))}
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="patientSymptoms">  Enter the patient Symptoms</label>
                                         <input type="text" class="form-control" id="patientSymptoms" placeholder="eg:headache" onChange={(e) => {
                                             console.log(e);
                                             setPatientSymptoms(e.target.value)
                                         }} />
                                     </div>
-                                    < div class="form-group col-md-6">
+                                    < div class="form-group col-md-4">
                                         <label for="patientDateOfDiagnosis">  Enter the Patient Date Of Diagnosis</label>
 
                                         <input type="date" class="form-control" id="patientDateOfDiagnosis" placeholder="2/12/2022" onChange={(e) => {
@@ -316,7 +313,7 @@ function AddPatient() {
                                             setPatientDateOfDiagnosis(e.target.value)
                                         }} />
                                     </div>
-                                    < div class="form-group col-md-6">
+                                    < div class="form-group col-md-4">
                                         <label for="patientImg">  Enter the Patient image</label>
 
                                         <input type="file" class="form-control" id="patientImg" placeholder="patientImg" onChange={(e) => {
@@ -324,7 +321,7 @@ function AddPatient() {
                                             setPatientImg(e.target.value)
                                         }} />
                                     </div>
-                                    {/* <div class="form-group col-md-6">
+                                    {/* <div class="form-group col-md-4">
                                 <label for="patientReferredBy">  Enter the patientReferredBy</label>
                                 <select className="form-control" id="patientReferredBy" value={patientReferredBy} onChange={handlePatientReferredBy}>
                                     <option value="">select the name of the referred public health inspector</option>
@@ -333,7 +330,7 @@ function AddPatient() {
                                 </select>
                             </div> */}
 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="patientReferredBy">  Enter the patientReferredBy</label>
 
                                         <input type="text" class="form-control" id="patientReferredBy" placeholder="ex:Saman" onChange={(e) => {
@@ -342,30 +339,9 @@ function AddPatient() {
                                         }} />
                                     </div>
                                     <br></br>
-
-
-
-
-                                    {/* < div class="form-group col-md-6">
-                                <label for="publicHealthRecommendations">   Enter the public Health Recommendations</label>
-                                <select class="custom-select custom-select mb-3" onChange={(e) => {
-                                    setPublicHealthRecommendations(e.target.value)
-                                }}>
-                                    <option selected>select</option>
-                                    <option value="vaccination">vaccination</option>
-                                    <option value="hand hygiene">hand hygiene</option>
-                                    <option value="Regular health checkup">Regular health checkup</option>
-                                    <option value="Avoid tobacco">Avoid tobacco</option>
-
-
-                                </select> */}
-
-                                    {/* <div class="valid-feedback">
-                            Looks good!
-                        </div> */}
                                 </div>
 
-                                <button class="btn btn-primary w-20 " type="submit">Submit</button>
+                                <button style={{ backgroundColor: "orange", width: '800px', marginLeft: '90px' }} type="submit">Submit</button>
 
                             </form >
                         </div>

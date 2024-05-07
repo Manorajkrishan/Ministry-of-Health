@@ -108,7 +108,7 @@ function ListOfPatients() {
                     <button >search</button>
                     <Link to="/patient/add" className="btn btn-outline-secondary" style={{ marginLeft: '160px' }}>Add</Link>
                     <Link to="/InfectiousDiseaseList/pdf" className="btn btn-outline-primary" style={{ marginLeft: '20px' }}>PDF</Link>
-
+                    <Link to="/createmessage" className="btn btn-outline-primary" style={{ marginLeft: '20px' }}>Send notices</Link>
 
                 </div>
                 <hr></hr>
