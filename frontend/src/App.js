@@ -10,34 +10,31 @@ import HomePage from './Component/Welcome';
 
 import LoginFormPhi from './Component/phi/LoginFormMidwife';
 
-
 // chemini
 import Add from "./Component/phi/DiseaseManagement/Diseases/AddDisease/Add";
 import AddAwarenessSession from './Component/phi/DiseaseManagement/AwarenessSession/addAwarenessSession.js';
 import ViewDisease from './Component/phi/DiseaseManagement/Diseases/ViewDiseases/ViewDisease.js';
 import ListOfDiseases from "./Component/phi/DiseaseManagement/Diseases/ListOfDiseases/ListOfDiseases";
-import DiseaseListReport from "./Component/phi/DiseaseManagement/DMReports/DiseaseReport/DiseaseListReport.js";
 import UpdateDiseases from "./Component/phi/DiseaseManagement/Diseases/UpdateDiseases/UpdateDiseases";
-
 import AddPatient from "./Component/phi/DiseaseManagement/Patient/AddPatient/AddPatient";
-
 import UpdatePatient from "./Component/phi/DiseaseManagement/Patient/UpdatePatient/UpdatePatient";
-
 import UpdateAwarenessSession from "./Component/phi/DiseaseManagement/AwarenessSession/UpdateAwarenessSession/updateAwarenessSession";
-
 import ListAwarenessSession from "./Component/phi/DiseaseManagement/AwarenessSession/DisplayAwarenessSession/ListAwarenessSessionAdmin.js";
 import DMsideNav from "./Component/phi/DiseaseManagement/DMNav/DMsideNav";
 import ListOfPatients from "./Component/phi/DiseaseManagement/Patient/ListOfPatients/ListOfPatients";
 import ViewPatientInfo from "./Component/phi/DiseaseManagement/Patient/ViewPatientInfo/ViewPatientInfo.js";
 import PhiProfile from './Component/phi/phiProfile/phiProfile.js';
-// import Map from './Component/Map/Map.js';
-
 import InfectiousPatientsReport from "./Component/phi/DiseaseManagement/DMReports/InfectiousPatientReport/InfectiousPatientsReport";
-
 import { useRef } from "react";
 import AwarenessSessionPDF from "./Component/phi/DiseaseManagement/PDF/AwarenessSessionPDF.js";
 import ReportHomeDM from "./Component/phi/DiseaseManagement/DiseaseManagementReport/ReportHomeDM.js";
-
+import PhiHome from './Component/phi/PhiHome/PhiHome.js';
+//phi reports
+import DiseaseListReport from './Component/phi/DiseaseManagement/DMReports/DiseasePDF/DiseasePDF.js';
+// import PieCharts from './Component/phi/DiseaseManagement/DiseaseManagementReport/PieCharts/PieCharts.js'
+import CreateMessage from './Component/phi/DiseaseManagement/Message/CreateMessage.js';
+import DisplaYMessagePHI from './Component/phi/DiseaseManagement/Message/DisplaYMessagePHI.js';
+import DisplayMessageRecipeint from './Component/phi/DiseaseManagement/Message/DisplayMessageRecipeint.js';
 
 
 const App = () => {
@@ -48,11 +45,11 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
 
         <Route path="/PhiLogin" element={< LoginFormPhi />} />
-     
+
 
 
         {/* disease Management:Chemini */}
-        {/* <Route path="/PHI/home" element={<PhiHome />} /> */}
+        <Route path="/PHI/home" element={<PhiHome />} />
         <Route path="/disease/add" element={<Add />} />
         <Route path="/disease/list" element={<ListOfDiseases />} />
         <Route
@@ -93,10 +90,14 @@ const App = () => {
           path="/documents/disease"
           element={<DiseaseListReport />}
         />
-        <Route path ="/disease/viewmore" element ={<ViewDisease/>}/>
+        <Route path="/disease/viewmore" element={<ViewDisease />} />
         <Route path="/dm/report" element={<ReportHomeDM />} />
         <Route path="/profile" element={<PhiProfile />} />
-       
+
+        <Route path="/createmessage" element={<CreateMessage />} />
+        <Route path="/sent/messages" element={<DisplaYMessagePHI />} />
+        <Route path="/received/messages" element={<DisplayMessageRecipeint />} />
+
 
       </Routes>
     </BrowserRouter>
