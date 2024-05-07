@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-
+import Swal from 'sweetalert2';
 import './Add.css'
-import Swal from 'sweetalert2'
 import DMsideNav from '../../DMNav/DMsideNav';
 import HeaderPHI from '../../Header/Header';
 function Add() {
@@ -37,7 +36,7 @@ function Add() {
 
             Swal.fire({
                 icon: 'success',
-                title: 'disease added',
+                title: 'product added',
                 text: 'added successfully',
                 timer: '2000',
                 shoConfirmaButton: false,
@@ -54,7 +53,7 @@ function Add() {
 
             Swal.fire({
                 icon: 'error',
-                title: 'disease not added',
+                title: 'product not added',
                 text: 'added  unsuccessfully',
                 timer: '2000',
                 shoConfirmaButton: false,

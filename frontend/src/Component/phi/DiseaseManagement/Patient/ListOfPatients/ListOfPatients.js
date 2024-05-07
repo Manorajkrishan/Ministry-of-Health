@@ -136,7 +136,7 @@ function ListOfPatients() {
                                         <th className="headerColor" scope="col">index</th>
                                         {/* <th className="headerColor" scope="col">ID</th> */}
                                         <th className="headerColor" scope="col">patient name</th>
-                                        <th className="headerColor" scope="col">NIC</th>
+                                        {/* <th className="headerColor" scope="col">NIC</th> */}
                                         <th className="headerColor" scope="col">patient age</th>
                                         <th className="headerColor" scope="col">gender</th>
                                         <th className="headerColor" scope="col">address</th>
@@ -161,7 +161,7 @@ function ListOfPatients() {
                                             <td>{index + 1}</td>
                                             {/* <td>{patient._id}</td> */}
                                             <td>{patient.patientName}</td>
-                                            <td>{patient.patientNic}</td>
+                                            {/* <td>{patient.patientNic}</td> */}
                                             <td>{patient.patientAge}</td>
                                             <td>{patient.patientGender}</td>
                                             <td>{patient.patientAddress}</td>
