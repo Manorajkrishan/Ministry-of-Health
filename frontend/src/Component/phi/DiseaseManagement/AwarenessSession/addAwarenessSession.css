@@ -1,0 +1,56 @@
+.addSession col-md-4 mb-3 {
+    word-spacing: 10px;
+
+}
+
+.addSession {
+    background-color:#FFFFFF;
+    padding: 10px;
+    border-radius: 16px;
+    border:2px solid rgb(185, 181, 181);
+    z-index: 1;
+}
+
+.addSession label {
+    display: inline-block;
+    margin: 0.2em;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.addSession input {
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid black
+}
+
+.addSession input#submit {
+    margin-top: 7px;
+    padding: 4px;
+}
+
+.addSession input#submit:hover {
+    background-color: green;
+    color: aliceblue
+}
+
+.addSession .form-row .form-group {
+    padding: 5px 30px 0 0;
+}
+
+.addSession input {
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid black
+}
+
+
+.addSession select {
+    padding: 2px;
+    border-radius: 2px;
+    border: 10px solid rgb(140, 52, 52) mar;
+    margin-top: 2px;
+    border: 1px solid black;
+  
+
+}

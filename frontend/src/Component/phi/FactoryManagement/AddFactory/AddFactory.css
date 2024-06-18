@@ -1,0 +1,92 @@
+/* Additional CSS for AddFactory component */
+
+.addF-container {
+    background-color: #B2BEB5; /* Change the background color of the form */
+    color: #333; /* Change the text color */
+    border: 1px solid #ccc; /* Change the border color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .addF-container .col {
+    margin-bottom: 20px;
+  }
+  
+  .addF-container .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .addF-container input[type="text"]:focus,
+  .addF-container input[type="number"]:focus,
+  .addF-container textarea:focus {
+    outline: none;
+  }
+  
+  .addF-container .btn-primary {
+    background-color: #1a1b1b;
+    color: #8ca12e;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addF-container .btn-primary:hover {
+    background-color: #e9ece5;
+  }
+  
+  .addF-container .btn-secondary {
+    background-color: #6c757d;
+    color: #bcbe1f;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addF-container .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Additional CSS for AddFactory component */
+  
+  .whole-page {
+    background-color: #f0f0f0; /* Change the background color of the whole page */
+    padding: 20px; /* Add padding to the whole page */
+    border-radius: 8px; /* Add border radius to the whole page */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow to the whole page */
+  }
+  
+  /* AddFactory.css */
+  
+  /* Style for the row class */
+  /* AddFactory.css */
+  
+  /* Style for the form-control class */
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  /* Style for the form-control when focused */
+  .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  

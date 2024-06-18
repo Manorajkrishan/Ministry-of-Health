@@ -1,0 +1,41 @@
+.report-container {
+    padding: 20px;
+}
+
+.report-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.card-header {
+    padding: 10px;
+    background-color: #f0f0f0; 
+    border-bottom: 1px solid #ccc; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+}
+
+.card-body {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Set the width to 100% for smaller screens */
+    }
+}

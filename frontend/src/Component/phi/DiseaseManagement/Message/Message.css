@@ -1,0 +1,53 @@
+.addM{}
+.addM body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e01616;
+}
+
+.addM container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #880000;
+    padding: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.addM h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.addM label {
+    display: block;
+    font-weight: bold;
+}
+
+
+.addM input
+textarea {
+    resize: vertical; /* Allows vertical resizing */
+    min-height: 1px; /* Set a minimum height */
+    width: 10px;
+    
+}
+
+/* .addM button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #bb1616;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+button:hover {
+    background-color: #0056b3;
+}

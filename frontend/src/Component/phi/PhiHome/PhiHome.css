@@ -1,0 +1,6 @@
+.phi {}
+
+.phi .container {
+
+    background: linear-gradient(to bottom, white, orange, rgb(220, 150, 66));
+}

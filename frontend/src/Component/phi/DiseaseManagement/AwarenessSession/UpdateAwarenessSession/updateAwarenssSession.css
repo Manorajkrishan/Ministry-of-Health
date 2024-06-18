@@ -1,0 +1,40 @@
+.updateSession col-md-4 mb-3 {
+    word-spacing: 10px;
+
+}
+
+.updateSession {
+    background-color:#FFFFFF;
+    padding: 10px;
+    border-radius: 16px;
+    border:2px solid rgb(185, 181, 181);
+    z-index: 1;
+
+}
+
+.updateSession label {
+    display: inline-block;
+    margin: 0.2em;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.updateSession input {
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid black
+}
+
+.updateSession input#submit {
+    margin-top: 7px;
+    padding: 4px;
+}
+
+.updateSession input#submit:hover {
+    background-color: green;
+    color: aliceblue
+}
+
+.updateSession .form-row .form-group {
+    padding: 5px 30px 0 0;
+}

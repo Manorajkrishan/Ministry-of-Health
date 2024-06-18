@@ -1,0 +1,62 @@
+/* FactoryDisplay.css */
+
+/* Styles for the "+ New hotels" button */
+.btn-add-hotels {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-add-hotels:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for the "Update" button */
+  .btn-update {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-update:hover {
+    background-color: #218838;
+  }
+  
+  /* Styles for the "Delete" button */
+  .btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  /* Styles for the "See More" button */
+  .btn-see-more {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-see-more:hover {
+    background-color: #5a6268;
+  }
+  
