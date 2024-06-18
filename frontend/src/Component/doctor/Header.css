@@ -1,0 +1,40 @@
+/* header.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333; /* Change to your preferred background color */
+  color: #fff; /* Change to your preferred text color */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-bar {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+}
+
+.logout-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545; /* Change to your preferred button color */
+  color: #fff; /* Change to your preferred text color */
+  cursor: pointer;
+}
+
+/* Style button hover effect */
+.logout-button:hover {
+  background-color: #c82333; /* Change to your preferred button hover color */
+}

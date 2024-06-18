@@ -1,0 +1,143 @@
+.logintitle2 {
+    margin-left: 35%;
+    margin-top: 20px;
+}
+
+.wrapper2 {
+    width: 420px;
+    background-image: url('../Assets/loginBackground.jpg');
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #000000;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-left: 35%;
+    margin-top: 10px;
+}
+
+.wrapper2 h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper2 .input-box2 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0 30px; /* Adjusted margin-top to 10px */
+}
+
+.input-box2 input {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 25px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.input-box2 input::placeholder {
+    color: #646060;
+}
+
+.input-box2 .icon {
+    position: absolute;
+    right: 20px;
+    top: 100%;
+    margin-top: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.wrapper2 .remember-forgot2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot2 label input {
+    accent-color: #fff;
+    margin-right: 4px;
+}
+
+.remember-forgot2 a {
+    color: #0247f7;
+    text-decoration: none;
+}
+
+.remember-forgot2 a:hover {
+    text-decoration: underline;
+}
+
+.wrapper2 button {
+    width: 50%;
+    height: 45px;
+    background: #F68012;
+    margin-left: 75px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.wrapper2 button:hover {
+    background-color: #c35e00;
+}
+
+.wrapper2 button:active {
+    background-color: #0963b2;
+}
+
+.wrapper2 .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link2 p a {
+    color: #0247f7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link2 p a:hover {
+    text-decoration: underline;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../Assets/loginBackground.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}

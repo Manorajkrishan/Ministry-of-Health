@@ -1,0 +1,37 @@
+.homepage {
+    height: 100vh;
+    background-image: url('./background.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttons-container {
+    display: flex;
+    margin-top: 250px; /* Move the buttons down by 50px */
+  }
+  
+  .button {
+    padding: 15px 30px; /* Padding for the buttons */
+    margin: 0 60px; /* Space between buttons */
+    background-color: #d18923; /* Button color */
+    color: #FFFFFF; /* White text color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px; /* Font size of the buttons */
+    width: 200px; /* Fixed width for all buttons */
+  }
+  
+  
+  .button:hover {
+    background-color: #b5741e; /* Darker background color on hover */
+  }
+
+  .logo {
+    width: auto;
+    max-height: 100px; /* Adjust the maximum height as needed */
+  }
+  
